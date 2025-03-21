@@ -3,12 +3,35 @@
     <head>
         <meta charset="utf-8">
         <title>Library</title>
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="style.css" type="text/css">
     </head>
     <body>
         <h1>Library</h1>
         <div>
             <button id="new">New Book</button>
             <button id="books">Books</button>
+        </div>
+        <div id="form-container" style="display: none;">
+            <form action="" method="post" id="book-form">
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author" required>
+
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" required>
+
+                <label for="numberOfPages">Number of pages: </label>
+                <input type="number" name="numberOfPages" id="numberOfPages" required>
+                
+                <div>
+                    <input type="radio" name="readOrNot" id="read" value="yes">
+                    <label for="read">Read</label>
+
+                    <input type="radio" name="readOrNot" id="not" value="no">
+                    <label for="not">Want to read</label>
+                </div>
+                <button type="submit" id="submit">Add</button>
+            </form>
         </div>
         <div id="library"></div>
     </body>
